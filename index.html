@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/3da1a747b2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Password Generator</h2>
+      <div class="result-container">
+        <span id="result"></span>
+        <button class="btn" id="clipboard">
+          <i class="far fa-clipboard"></i>
+        </button>
+      </div>
+
+      <div class="settings">
+        <div class="setting">
+          <label>Password Length</label>
+          <input type="number" id="length" min="4" max="20" value="20" />
+        </div>
+
+        <div class="setting">
+          <label>Include Uppercase Letters</label>
+          <input type="checkbox" id="uppercase" checked />
+        </div>
+
+        <div class="setting">
+          <label>Include Lowercase Letters</label>
+          <input type="checkbox" id="lowercase" checked />
+        </div>
+
+        <div class="setting">
+          <label>Include Numbers</label>
+          <input type="checkbox" id="numbers" checked />
+        </div>
+
+        <div class="setting">
+          <label>Include Symbols</label>
+          <input type="checkbox" id="symbols" checked />
+        </div>
+      </div>
+
+      <button class="btn btn-large" id="generate">Generate Password</button>
+    </div>
+
+    <!-- SOCIAL PANEL HTML -->
+    <div class="social-panel-container">
+      <div class="social-panel">
+        <p>
+          Created With <i class="fa fa-heart"></i> By
+          <span class="name">Akash</span>
+        </p>
+        <button class="close-btn"><i class="fas fa-times"></i></button>
+        <h4>Get in touch on</h4>
+        <ul>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/akash-patil-2b9a631ba"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/akashpatilx7" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/_akash_patil7" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/_akash_patil__18/"
+              target="_blank"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <button class="floating-btn">Get in Touch</button>
+
+    <script src="src/javascript/main.js"></script>
+  </body>
+</html>
