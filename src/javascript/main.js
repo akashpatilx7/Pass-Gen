@@ -20,6 +20,8 @@ const randomFunc = {
   symbol: getRandomSymbol,
 };
 
+
+
 // Generate Event Listener
 generateEl.addEventListener("click", () => {
   const length = +lengthEl.value;
@@ -38,13 +40,18 @@ generateEl.addEventListener("click", () => {
     hasSymbol,
     length
   );
+
   // Passing whatever the Generated Password is to the resultEl to display in the Horizontal Bar.
 });
 
+
+
 // Copy Password To Clipboard (STANDARD METHOD IN JAVASCRIPT)
+
 clipboardEl.addEventListener("click", () => {
   const textarea = document.createElement("textarea");
-  const password = resultEl.innerText; // innerText is used to copy or paste some text to or from an element.
+  const password = resultEl.innerText;
+  // innerText is used to copy or paste some text to or from an element.
 
   if (!password) {
     return;
@@ -58,8 +65,11 @@ clipboardEl.addEventListener("click", () => {
   alert("Password Copied To Clipboard !");
 });
 
+
+
 // Generate Password Function
 function generatePassword(lower, upper, number, symbol, length) {
+
   // 1. Initialize a password variable (We will have a string that will continuously build on to create a password.
 
   let generatedPassword = "";
@@ -71,6 +81,8 @@ function generatePassword(lower, upper, number, symbol, length) {
   // const typesArr = [{ lower }, { upper }, { number }, { symbol }]; // An array of variables used for counting the number of checked values from the Password Generator Dialogue Box.
 
   // By wrapping in "Curly Braces", we will get an array of objects having their values of "True" or "False" by their sides.
+
+
 
   // 2. Filter out unchecked types of elements from getting included in the "Generated Password". (We will use filter method for this)
 
@@ -86,6 +98,8 @@ function generatePassword(lower, upper, number, symbol, length) {
   if (typesCount === 0) {
     return "";
   }
+
+
 
   // 3. Loop over the length and call the generator function for each type of inputs to be included in the "Generated Password". (Generating the different characters, uppercase, lowercase, etc)
 
@@ -111,12 +125,17 @@ function generatePassword(lower, upper, number, symbol, length) {
   const finalPassword = generatedPassword.slice(0, length);
   return finalPassword;
 
+
+
   // 4. Add the final password to the password variable and return it to the Result Container.
 
   // We have already done this step as we putting our finalPassword into the generatedPassword and we have already put the generatedPassword into the "Result Container".
 }
 
+
+
 // Generator Functions
+
 
 function getRandomLower() {
   // Math.random() ===> Generates A Random Decimal Number from 0 to 1
@@ -135,17 +154,20 @@ console.log(String.fromCharCode(97)); ===> OUTPUT : 'a'
 
 */
 
+
 function getRandomUpper() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }
 
 // console.log(getRandomUpper());
 
+
 function getRandomNumber() {
   return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 }
 
 // console.log(getRandomNumber());
+
 
 function getRandomSymbol() {
   // In Javascript, we can get a character from a string in a similar way as an array.
@@ -155,8 +177,6 @@ function getRandomSymbol() {
 }
 
 // console.log(getRandomSymbol());
-
-
 
 
 
